@@ -1,4 +1,4 @@
-package com.example.benot.lights;
+package com.sofiadutta.lights;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -17,11 +17,6 @@ import android.os.StrictMode;
 import android.provider.ContactsContract;
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyProperties;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -32,27 +27,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.IOException;
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
+
+import java.nio.charset.StandardCharsets;
 import java.security.KeyStore;
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.List;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.GCMParameterSpec;
-import javax.crypto.spec.IvParameterSpec;
-
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -65,6 +55,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * Id to identity READ_CONTACTS permission request.
      */
     private static final int REQUEST_READ_CONTACTS = 0;
+    TextInputLayout til1, til2;
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -74,7 +65,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
-
     private LinearLayout mainLayout;
 
     @Override
@@ -90,10 +80,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
 
         // Set up the login form.
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
+        mEmailView = findViewById(R.id.email);
         populateAutoComplete();
 
-        mPasswordView = (EditText) findViewById(R.id.password);
+        mPasswordView = findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -105,7 +95,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        Button mEmailSignInButton = findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -135,7 +125,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             final Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
             cipher.init(Cipher.ENCRYPT_MODE, secretKey);
             byte[] iv = cipher.getIV();
-            byte[] encryption = cipher.doFinal("im hungry".getBytes("UTF-8"));
+            byte[] encryption = cipher.doFinal("im hungry".getBytes(StandardCharsets.UTF_8));
 
 
             KeyStore keyStore = KeyStore.getInstance("AndroidKeyStore");
@@ -147,14 +137,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             final GCMParameterSpec spec = new GCMParameterSpec(128, iv);
             cipher.init(Cipher.DECRYPT_MODE, secretKey1, spec);
             final byte[] decodedData = cipher.doFinal();
-            final String unencryptedString = new String(decodedData, "UTF-8");
+            final String unencryptedString = new String(decodedData, StandardCharsets.UTF_8);
         } catch (Exception e) {
 
         }
     }
-
-
-    TextInputLayout til1, til2;
 
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
@@ -258,19 +245,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     private boolean isEmailValid(String email) {
-        if (!email.contains("@") || email.startsWith("@") || email.length() < 7 || !email.contains(".") ||
-                email.startsWith(".") || email.indexOf("@") > email.lastIndexOf(".") ||
-                email.endsWith("@") || email.endsWith(".")) {
-            return false;
-        }
-        return true;
+        return email.contains("@") && !email.startsWith("@") && email.length() >= 7 && email.contains(".") &&
+                !email.startsWith(".") && email.indexOf("@") <= email.lastIndexOf(".") &&
+                !email.endsWith("@") && !email.endsWith(".");
     }
 
     private boolean isPasswordValid(String password) {
-        if (password.length() < 7 || !(password.matches(".*[a-zA-Z]+.*"))) {
-            return false;
-        }
-        return true;
+        return password.length() >= 7 && password.matches(".*[a-zA-Z]+.*");
     }
 
     /**

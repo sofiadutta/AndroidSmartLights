@@ -1,6 +1,5 @@
-package com.example.benot.lights;
+package com.sofiadutta.lights;
 
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,28 +8,14 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.io.IOException;
 
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private String[][] mDataset;
-    private KasaInfo kasaInfo;
-
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
-        private TextView mTextView;
-        private Switch mSwitch;
-
-        public ViewHolder(View v) {
-            super(v);
-
-            mTextView = v.findViewById(R.id.text_title);
-            mSwitch = v.findViewById(R.id.toggle);
-        }
-    }
+    private com.sofiadutta.lights.KasaInfo kasaInfo;
 
     // Provide a suitable constructor (depends on the kind of dataset)
     public MyAdapter(KasaInfo kasaInfo) {
@@ -57,11 +42,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         holder.mTextView.setText(mDataset[position][0]);
-        if(mDataset[position][1].charAt(0) == ':') {
+        if (mDataset[position][1].charAt(0) == ':') {
 //            Log.v("Sofia what did we get?", "'"+mDataset[position][1].substring(1)+"'");
             holder.mSwitch.setChecked(Integer.parseInt(mDataset[position][1].substring(1)) == 1);
-        }
-        else {
+        } else {
 //            Log.v("Sofia what did we get in else?", mDataset[position][1]);
             holder.mSwitch.setChecked(Integer.parseInt(mDataset[position][1]) == 1);
         }
@@ -70,7 +54,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 try {
                     kasaInfo.changeState(position);
                 } catch (IOException e) {
-                    Log.v("Sofia debug", e.getMessage().toString());
+                    Log.v("Sofia debug", e.getMessage());
                 }
             }
         });
@@ -80,6 +64,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public int getItemCount() {
         return mDataset.length;
+    }
+
+    // Provide a reference to the views for each data item
+    // Complex data items may need more than one view per item, and
+    // you provide access to all the views for a data item in a view holder
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        // each data item is just a string in this case
+        private TextView mTextView;
+        private Switch mSwitch;
+
+        public ViewHolder(View v) {
+            super(v);
+
+            mTextView = v.findViewById(R.id.text_title);
+            mSwitch = v.findViewById(R.id.toggle);
+        }
     }
 
 
