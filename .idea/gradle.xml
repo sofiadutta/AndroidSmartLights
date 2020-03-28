@@ -10,6 +10,7 @@
         <option name="modules">
           <set>
             <option value="/media/sofia/data/code/android/projects/AndroidSmartLights" />
+            <option value="/media/sofia/data/code/android/projects/AndroidSmartLights/app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
