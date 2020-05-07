@@ -42,7 +42,7 @@ dependencies {
     implementation files('libs/androjena_0.5_sources.jar')
     implementation files('libs/iri-0.8.jar')
     implementation files('libs/tdboid_0.4.jar')
-    implementation files('DLQueryEngine.jar')
-    implementation files('jfact-0.9.1.jar')
-    implementation files('owlapi-distribution-3.4.3-bin.jar')
+    implementation files('libs/DLQueryEngine.jar')
+    implementation files('libs/jfact-0.9.1.jar')
+    implementation files('libs/owlapi-distribution-3.4.3-bin.jar')
 }

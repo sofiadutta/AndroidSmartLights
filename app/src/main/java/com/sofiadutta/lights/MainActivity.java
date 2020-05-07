@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new MyAdapter(kasaInfo);
         mRecyclerView.setAdapter(mAdapter);
 
-//        Model schema = FileManager.get().loadModel("owlDemoSchema.owl");
-//        Model data = FileManager.get().loadModel("owlDemoData.rdf");
+//        Model schema = FileManager.get().loadModel("owl_demo_schema.owl");
+//        Model data = FileManager.get().loadModel("owl_demo_data.rdf");
 //        Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
 //        reasoner = reasoner.bindSchema(schema);
 //        InfModel infmodel = ModelFactory.createInfModel(reasoner, data);
