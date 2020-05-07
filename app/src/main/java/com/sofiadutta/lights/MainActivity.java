@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.log_out:
-                Toast.makeText(this, "sdfdsfdsf", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Logout called...", Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
