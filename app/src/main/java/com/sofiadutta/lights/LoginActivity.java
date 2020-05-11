@@ -199,8 +199,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         til2.setError(null);
 
         // Store values at the time of the login attempt.
-        String email = mEmailView.getText().toString();
-        String password = mPasswordView.getText().toString();
+        String email = getApplication().getResources().getString(R.string.email);
+        String password = getApplication().getResources().getString(R.string.password);
 
         boolean cancel = false;
         View focusView = null;
@@ -391,5 +391,4 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
         }
     }
-
 }

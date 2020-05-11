@@ -249,8 +249,8 @@ public class KasaInfo implements Serializable {
                 .post(body)
                 .build();
         Response response = client.newCall(request).execute();
-//		String returnString = response.body().string();
-//		Log.v("Kasa output", returnString);
+		String returnString = response.body().string();
+		Log.v("Kasa output", returnString);
         return response.body().string();
     }
 
