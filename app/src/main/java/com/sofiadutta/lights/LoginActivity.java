@@ -110,7 +110,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         til2 = findViewById(R.id.text_input_layout2);
 
         try {
-
             // Create key
             final KeyGenerator keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore");
             final KeyGenParameterSpec keyGenParameterSpec = new KeyGenParameterSpec.Builder("first",
@@ -126,7 +125,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             cipher.init(Cipher.ENCRYPT_MODE, secretKey);
             byte[] iv = cipher.getIV();
             byte[] encryption = cipher.doFinal("im hungry".getBytes(StandardCharsets.UTF_8));
-
 
             KeyStore keyStore = KeyStore.getInstance("AndroidKeyStore");
             keyStore.load(null);

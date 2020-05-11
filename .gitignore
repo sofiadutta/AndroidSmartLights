@@ -91,3 +91,4 @@ build/
 *.class
 .gradle/
 /.gradle/
+app/src/main/res/values/passcode.xml
