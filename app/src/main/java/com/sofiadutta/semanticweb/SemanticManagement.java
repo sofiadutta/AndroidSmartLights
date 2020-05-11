@@ -66,7 +66,7 @@ import uk.ac.manchester.cs.jfact.JFactFactory;
 public class SemanticManagement {
 
 	public static final String TAG = "AAA";
-	public static final int ontology_id = R.raw.context;
+	public static final int ontology_id = R.raw.cloud_smart_device_privacy;
 	// a sample json file
 	public static String url = "http://webdiis.unizar.es/~ryus/other/sample2.json";
 	public OWLOntologyManager manager;

@@ -1,6 +1,7 @@
 package com.sofiadutta.lights;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -14,6 +15,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.hp.hpl.jena.rdf.model.InfModel;
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.reasoner.Reasoner;
+import com.hp.hpl.jena.reasoner.ReasonerRegistry;
+import com.hp.hpl.jena.reasoner.ValidityReport;
+import com.hp.hpl.jena.util.FileManager;
+import com.hp.hpl.jena.vocabulary.RDF;
+import com.sofiadutta.semanticweb.SemanticManagement;
+
+import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,12 +69,19 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new MyAdapter(kasaInfo);
         mRecyclerView.setAdapter(mAdapter);
 
-//        Model schema = FileManager.get().loadModel("owl_demo_schema.owl");
-//        Model data = FileManager.get().loadModel("owl_demo_data.rdf");
+//        InputStream is = getApplicationContext().getResources().openRawResource(R.raw.cloud_smart_device_privacy);
+
+//        Model schema = FileManager.get().loadModel("https://ebiquity.umbc.edu/_file_directory_/papers/974.owl");
+//        Model data = FileManager.get().loadModel("https://ebiquity.umbc.edu/_file_directory_/papers/974.owl");
 //        Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
 //        reasoner = reasoner.bindSchema(schema);
 //        InfModel infmodel = ModelFactory.createInfModel(reasoner, data);
-
+//        ValidityReport rep = infmodel.validate();
+//        Resource resource = infmodel.getResource("https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Person");
+//        infmodel.listStatements();
+//        Log.v("ontology", infmodel.listStatements().toString());
+//        SemanticManagement sm = new SemanticManagement(getApplicationContext());
+//        sm.getNamesInstances("Prajit");
     }
 
     @Override

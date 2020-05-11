@@ -1,21 +1,12 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
-<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#"
-     xml:base="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+<rdf:RDF xmlns="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#"
+     xml:base="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl"/>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl"/>
     
 
 
@@ -30,74 +21,74 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#contains -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#contains -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#contains">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#isIn"/>
+    <owl:ObjectProperty rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#contains">
+        <owl:inverseOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#isIn"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#hasActivity -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#hasActivity -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#hasActivity">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Activity"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#User"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#isPerformedBy"/>
+    <owl:ObjectProperty rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#hasActivity">
+        <owl:inverseOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#isPerformedBy"/>
+        <rdfs:domain rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#User"/>
+        <rdfs:range rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Activity"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#hasLocation -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#hasLocation -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#hasLocation">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#User"/>
+    <owl:ObjectProperty rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#hasLocation">
+        <owl:inverseOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#holds"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#User"/>
+        <rdfs:range rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#hasLowLevelLocation -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#hasLowLevelLocation -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#hasLowLevelLocation">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#User"/>
+    <owl:ObjectProperty rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#hasLowLevelLocation">
+        <rdfs:domain rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#User"/>
+        <rdfs:range rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#hasSupervisor -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#hasSupervisor -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#hasSupervisor">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professor"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Student"/>
+    <owl:ObjectProperty rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#hasSupervisor">
+        <rdfs:domain rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Student"/>
+        <rdfs:range rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professor"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#holds -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#holds -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#holds">
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#hasLocation"/>
+    <owl:ObjectProperty rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#holds">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#isIn -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#isIn -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#isIn">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
+    <owl:ObjectProperty rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#isIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location"/>
+        <rdfs:range rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#isPerformedBy -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#isPerformedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#isPerformedBy"/>
+    <owl:ObjectProperty rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#isPerformedBy"/>
     
 
 
@@ -112,1341 +103,1224 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Academic_Role -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Academic_Role -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Academic_Role">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Role"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Academic_Role">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Role"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Accelerometer -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Accelerometer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Accelerometer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Motion_Sensor"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Accelerometer">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Motion_Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Access_Level -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Access_Level -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Access_Level">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobile"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Access_Level">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobile"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Access_Type -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Access_Type -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Access_Type">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobile"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Access_Type">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobile"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Activity -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Activity -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Activity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Platys"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Activity">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Platys"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Adjunct -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Adjunct -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Adjunct">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Faculty"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Adjunct">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Faculty"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Allow -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Allow -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Allow">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Access_Type"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Allow">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Access_Type"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Allow_Anonymized -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Allow_Anonymized -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Allow_Anonymized">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Allow"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Allow_Anonymized">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Allow"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Allow_Fake -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Allow_Fake -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Allow_Fake">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Allow"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Allow_Fake">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Allow"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Allow_Normal -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Allow_Normal -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Allow_Normal">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Allow"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Allow_Normal">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Allow"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AndroidVersionRequired -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AndroidVersionRequired -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AndroidVersionRequired">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AndroidVersionRequired">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#App -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#App -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#App">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Requester"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#App">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Requester"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppCategory -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppCategory -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppCategory">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppCategory">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppContentRating -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppContentRating -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppContentRating">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppContentRating">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppDescription -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppDescription -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppDescription">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppDescription">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppDeveloper -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppDeveloper -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppDeveloper">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppDeveloper">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppInstallCount -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppInstallCount -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppInstallCount">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppInstallCount">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppName -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppName -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppName">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppName">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppPackageName -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppPackageName -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppPackageName">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppPackageName">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppReviewCount -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppReviewCount -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppReviewCount">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppReviewCount">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppReviewRating -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppReviewRating -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppReviewRating">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppReviewRating">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppUpdateDate -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppUpdateDate -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppUpdateDate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppUpdateDate">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppVersion -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppVersion -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppVersion">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppVersion">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppWhatsNew -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppWhatsNew -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#AppWhatsNew">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#AppWhatsNew">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Attending_Lecture -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Attending_Lecture -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Attending_Lecture">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Activity"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Attending_Lecture">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Activity"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Audio -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Audio -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Audio">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Media"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Audio">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Media"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Audio_Visual -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Audio_Visual -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Audio_Visual">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Hardware_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Audio_Visual">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Hardware_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Bluetooth -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Bluetooth -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Bluetooth">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Network"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Bluetooth">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Network"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Building -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Building -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Building">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Building">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#CEO -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#CEO -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#CEO">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Role"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#CEO">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Role"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Calendar -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Calendar -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Calendar">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Software_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Calendar">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Software_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Call_Logs -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Call_Logs -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Call_Logs">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Software_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Call_Logs">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Software_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Camera -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Camera -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Camera">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Audio_Visual"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Camera">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Audio_Visual"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Cellular -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Cellular -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Cellular">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Internet"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Cellular">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Internet"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#City -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#City -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#City">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#City">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Classroom -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Classroom -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Classroom">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Place"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Classroom">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Place"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Coarse_Localization_Component -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Coarse_Localization_Component -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Coarse_Localization_Component">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Localization_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Coarse_Localization_Component">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Localization_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Colleague -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Colleague -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Colleague">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Network"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Colleague">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Network"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Contacts -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Contacts -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Contacts">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Software_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Contacts">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Software_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Country -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Country -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Country">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Country">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#County -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#County -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#County">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#County">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Course_Work -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Course_Work -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Course_Work">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Studying"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Course_Work">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Studying"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Date -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Date -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Date">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal_Activity"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Date">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal_Activity"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Delivering_Lecture -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Delivering_Lecture -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Delivering_Lecture">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Activity"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Delivering_Lecture">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Activity"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Deny -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Deny -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Deny">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Access_Type"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Deny">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Access_Type"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Department_Office -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Department_Office -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Department_Office">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Office"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Department_Office">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Office"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Developer -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Developer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Developer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Role"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Developer">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Role"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#DeveloperCountry -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#DeveloperCountry -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#DeveloperCountry">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#DeveloperCountry">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#DeveloperEmail -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#DeveloperEmail -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#DeveloperEmail">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#DeveloperEmail">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#DeveloperWebsite -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#DeveloperWebsite -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#DeveloperWebsite">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#DeveloperWebsite">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Device -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Device -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Device">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Platys"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Device">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Platys"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Device_Id -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Device_Id -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Device_Id">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Software_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Device_Id">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Software_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Email -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Email -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Email">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Software_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Email">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Software_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Entertainment -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Entertainment -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Entertainment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal_Activity"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Entertainment">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal_Activity"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Environmental_Sensor -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Environmental_Sensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Environmental_Sensor">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Hardware_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Environmental_Sensor">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Hardware_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Exercising -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Exercising -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Exercising">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal_Activity"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Exercising">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal_Activity"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Faculty -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Faculty -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Faculty">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Academic_Role"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Faculty">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Academic_Role"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Family -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Family -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Family">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal_Network"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Family">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal_Network"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Files -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Files -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Files">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Media"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Files">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Media"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Fine_Localization_Component -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Fine_Localization_Component -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Fine_Localization_Component">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Localization_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Fine_Localization_Component">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Localization_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Friends -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Friends -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Friends">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal_Network"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Friends">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal_Network"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#GPS -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#GPS -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#GPS">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Fine_Localization_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#GPS">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Fine_Localization_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#General_Manager -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#General_Manager -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#General_Manager">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Role"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#General_Manager">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Role"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Geomagnetic_Field -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Geomagnetic_Field -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Geomagnetic_Field">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Positional_Sensor"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Geomagnetic_Field">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Positional_Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Government_Office -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Government_Office -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Government_Office">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Office"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Government_Office">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Office"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Graduate_Student -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Graduate_Student -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Graduate_Student">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Student"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Graduate_Student">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Student"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Gravity -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Gravity -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Gravity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Motion_Sensor"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Gravity">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Motion_Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Gyroscope -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Gyroscope -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Gyroscope">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Motion_Sensor"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Gyroscope">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Motion_Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Hardware_Component -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Hardware_Component -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Hardware_Component">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Resource"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Hardware_Component">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Resource"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Home -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Home -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Home">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Place"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Home">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Place"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Images -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Images -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Images">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Media"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Images">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Media"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Instant -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Instant -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Instant">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Time"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Instant">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Time"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Internet -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Internet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Internet">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Network"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Internet">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Network"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Interval -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Interval -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Interval">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Time"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Interval">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Time"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Lab -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Lab -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Lab">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Office"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Lab">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Office"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Lab_Meeting -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Lab_Meeting -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Lab_Meeting">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Meeting"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Lab_Meeting">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Meeting"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Lecturer -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Lecturer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Lecturer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Faculty"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Lecturer">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Faculty"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Library -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Library -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Library">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Place"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Library">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Place"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Light -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Light -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Light">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Environmental_Sensor"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Light">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Environmental_Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Localization_Component -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Localization_Component -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Localization_Component">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Hardware_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Localization_Component">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Hardware_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Platys"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Platys"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Media -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Media -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Media">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Software_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Media">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Software_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Meeting -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Meeting -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Meeting">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Activity"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Meeting">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Activity"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Messages -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Messages -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Messages">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Software_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Messages">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Software_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Microphone -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Microphone -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Microphone">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Audio_Visual"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Microphone">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Audio_Visual"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Mobile -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Mobile -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Mobile">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Device"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Mobile">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Device"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Motion_Sensor -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Motion_Sensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Motion_Sensor">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Hardware_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Motion_Sensor">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Hardware_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Movie_Theatre -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Movie_Theatre -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Movie_Theatre">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Place"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Movie_Theatre">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Place"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Network -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Network -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Network">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Hardware_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Network">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Hardware_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Network_Location -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Network_Location -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Network_Location">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Coarse_Localization_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Network_Location">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Coarse_Localization_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Off_Hours -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Off_Hours -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Off_Hours">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Interval"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Off_Hours">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Interval"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Office -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Office -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Office">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Place"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Office">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Place"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Optical_Head_Mounted_Display -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Optical_Head_Mounted_Display -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Optical_Head_Mounted_Display">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Wearable"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Optical_Head_Mounted_Display">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Wearable"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Orientation -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Orientation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Orientation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Positional_Sensor"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Orientation">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Positional_Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Partying -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Partying -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Partying">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Entertainment"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Partying">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Entertainment"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Person -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Person -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Person">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Requester"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Person">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Requester"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Access_Level"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Access_Level"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal_Activity -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal_Activity -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal_Activity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Activity"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal_Activity">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Activity"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal_Network -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal_Network -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal_Network">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Public"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal_Network">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Public"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Place -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Place -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Place">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Place">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobile -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobile -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobile"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobile"/>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobileLOD"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobileLOD"/>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Platys -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Platys -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Platys"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Platys"/>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Playing -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Playing -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Playing">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Entertainment"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Playing">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Entertainment"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Point -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Point -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Point">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Point">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Positional_Sensor -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Positional_Sensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Positional_Sensor">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Hardware_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Positional_Sensor">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Hardware_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PostDoc -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PostDoc -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PostDoc">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Student"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PostDoc">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Student"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Post_Office -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Post_Office -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Post_Office">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Government_Office"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Post_Office">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Government_Office"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Pressure -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Pressure -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Pressure">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Environmental_Sensor"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Pressure">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Environmental_Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Private -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Private -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Private">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal_Network"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Private">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal_Network"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Access_Level"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Access_Level"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Activity -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Activity -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Activity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Activity"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Activity">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Activity"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Network -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Network -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Network">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Public"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Network">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Public"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Role -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Role -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Role">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Role"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Role">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Role"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professor -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professor">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Faculty"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professor">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Faculty"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professor_Meeting -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professor_Meeting -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professor_Meeting">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Meeting"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professor_Meeting">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Meeting"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Project_Manager -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Project_Manager -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Project_Manager">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Role"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Project_Manager">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Role"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Project_Meeting -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Project_Meeting -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Project_Meeting">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Meeting"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Project_Meeting">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Meeting"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Project_Work -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Project_Work -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Project_Work">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Studying"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Project_Work">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Studying"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Proximity -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Proximity -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Proximity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Positional_Sensor"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Proximity">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Positional_Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Public -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Public -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Public">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Visibility"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Public">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Visibility"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Relative_Humidity -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Relative_Humidity -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Relative_Humidity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Environmental_Sensor"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Relative_Humidity">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Environmental_Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Requester -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Requester -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Requester">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobile"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Requester">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobile"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Resource -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Resource -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Resource">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobile"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Resource">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobile"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Role -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Role -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Role">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Platys"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Role">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Platys"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Room -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Room -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Room">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Room">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Rotation -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Rotation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Rotation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Motion_Sensor"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Rotation">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Motion_Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Running -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Running -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Running">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Exercising"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Running">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Exercising"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Secure_Government_Office -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Secure_Government_Office -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Secure_Government_Office">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Government_Office"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Secure_Government_Office">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Government_Office"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Sleeping -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Sleeping -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Sleeping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Personal_Activity"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Sleeping">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Personal_Activity"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Smart_Watch -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Smart_Watch -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Smart_Watch">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Wearable"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Smart_Watch">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Wearable"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Software_Component -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Software_Component -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Software_Component">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Resource"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Software_Component">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Resource"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#State -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#State -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#State">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#State">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Location"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Student -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Student -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Student">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Academic_Role"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Student">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Academic_Role"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Studying -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Studying -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Studying">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Activity"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Studying">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Activity"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Subordinate -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Subordinate -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Subordinate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Network"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Subordinate">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Network"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Superior -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Superior -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Superior">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Network"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Superior">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Network"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Supervisor_Office -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Supervisor_Office -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Supervisor_Office">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Office"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Supervisor_Office">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Office"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Team_Lead -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Team_Lead -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Team_Lead">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Professional_Role"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Team_Lead">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Professional_Role"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Temperature -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Temperature -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Temperature">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Environmental_Sensor"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Temperature">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Environmental_Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Time -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Time -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Time">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Platys"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Time">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Platys"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Undergraduate_Student -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Undergraduate_Student -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Undergraduate_Student">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Student"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Undergraduate_Student">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Student"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#University_Staff -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#University_Staff -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#University_Staff">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Academic_Role"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#University_Staff">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Academic_Role"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#User -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#User -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#User">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Platys"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#User">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Platys"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#User_Dictionary -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#User_Dictionary -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#User_Dictionary">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Software_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#User_Dictionary">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Software_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Video -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Video -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Video">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Media"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Video">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Media"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Visibility -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Visibility -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Visibility">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#PlatMobile"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Visibility">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#PlatMobile"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Wearable -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Wearable -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Wearable">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Device"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Wearable">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Device"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Week_Day -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Week_Day -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Week_Day">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Interval"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Week_Day">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Interval"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Weekend -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Weekend -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Weekend">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Interval"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Weekend">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Interval"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#WiFi -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#WiFi -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#WiFi">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Internet"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#WiFi">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Internet"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#WiFi_Location -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#WiFi_Location -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#WiFi_Location">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Coarse_Localization_Component"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#WiFi_Location">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Coarse_Localization_Component"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Working_Hours -->
+    <!-- https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Working_Hours -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Working_Hours">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Interval"/>
+    <owl:Class rdf:about="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Working_Hours">
+        <rdfs:subClassOf rdf:resource="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#Interval"/>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Abed -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Abed">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#User"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Annie -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Annie">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#User"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#GCC -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#GCC">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
-        <isIn rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#USA"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Home -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Home">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
-        <isIn rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#USA"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Jeff -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Jeff">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#User"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Library -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Library">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
-        <isIn rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#GCC"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#MeetingInd -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#MeetingInd">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Meeting"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Pierce -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Pierce">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#User"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#ReadingInd -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#ReadingInd"/>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#RunningInd -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#RunningInd">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Running"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#StudyGroupInd -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#StudyGroupInd">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Meeting"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#StudyRoomF -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#StudyRoomF">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
-        <isIn rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Library"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#USA -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#USA">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/11/Ontology1388396980991.owl#Location"/>
-    </owl:NamedIndividual>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

@@ -1,0 +1,889 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ebiquity.umbc.edu/get/a/publication/974.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ebiquity.umbc.edu/get/a/publication/974.owl">
+    <Prefix name="ebq" IRI="http://ebiquity.umbc.edu/get/a/publication/974.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="ssn" IRI="https://www.w3.org/ns/ssn/"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="sosa" IRI="https://www.w3.org/ns/sosa/"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="platys" IRI="https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl#"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
+    <Import>https://prajitdas.com/assets/docs/ontologies/platys_access_control.owl</Import>
+    <Declaration>
+        <Class IRI="#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Adult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Apps"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Audio_Visual_Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bathroom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bedroom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Browsers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Child"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#City"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Computer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Computing_Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Context"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cooking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#County"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Crash_Reports"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Credit_Card_Information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Device_IP_Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Device_Id"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Device_Info"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Device_Name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Device_Type"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dining_Room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Downtime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Email_Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Family_Member"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GPS_Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Guest_Bedroom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Home"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Household_Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Identity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Instant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kids_Bedroom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kitchen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Leisure_Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Living_Room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Master_Bedroom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mobile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Off_Hours"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Phone_Number"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Private_Room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Public_Room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Read_Only"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Semi_Private_Room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service_Provider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Setup_Smart_Home_Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sleeping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Camera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Display"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Doorbells"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Home_Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Light"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Lock"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Plug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Refrigerator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Security_System"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Smoke_Detector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Speaker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Thermostat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#State"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stranger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Streaming_Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Study_Room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Studying"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#URL_Requested"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User_PII"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Watching_TV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weekday"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weekend"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Work_Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Work_From_Home"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Working_Hours"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#accessRequest"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#accessType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCoordinates"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasActivityDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAge"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGPSCoordinate"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="platys:Activity"/>
+        <Class IRI="#Activity"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="platys:Location"/>
+        <Class IRI="#Location"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="platys:Person"/>
+        <Class IRI="#Identity"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="platys:Time"/>
+        <Class IRI="#Time"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Adult"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Family_Member"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasAge"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">18</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Child"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Family_Member"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasAge"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">18</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Activity"/>
+        <Class IRI="#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <Class IRI="#User_PII"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Adult"/>
+        <Class IRI="#Family_Member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Apps"/>
+        <Class IRI="#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Audio_Visual_Device"/>
+        <Class IRI="#Smart_Home_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bathroom"/>
+        <Class IRI="#Private_Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bedroom"/>
+        <Class IRI="#Private_Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Browsers"/>
+        <Class IRI="#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Child"/>
+        <Class IRI="#Family_Member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Computer"/>
+        <Class IRI="#Computing_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Computing_Device"/>
+        <Class IRI="#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cooking"/>
+        <Class IRI="#Household_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#County"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crash_Reports"/>
+        <Class IRI="#Device_Info"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Credit_Card_Information"/>
+        <Class IRI="#User_PII"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Device_IP_Address"/>
+        <Class IRI="#Device_Info"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Device_Id"/>
+        <Class IRI="#Device_Info"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Device_Info"/>
+        <Class IRI="#User_PII"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Device_Name"/>
+        <Class IRI="#Device_Info"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Device_Type"/>
+        <Class IRI="#Device_Info"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dining_Room"/>
+        <Class IRI="#Public_Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Downtime"/>
+        <Class IRI="#Interval"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Email_Address"/>
+        <Class IRI="#User_PII"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Family_Member"/>
+        <Class IRI="#Identity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GPS_Location"/>
+        <Class IRI="#User_PII"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Guest_Bedroom"/>
+        <Class IRI="#Bedroom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Home"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Household_Activity"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identity"/>
+        <Class IRI="#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instant"/>
+        <Class IRI="#Time"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interval"/>
+        <Class IRI="#Time"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kids_Bedroom"/>
+        <Class IRI="#Bedroom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kitchen"/>
+        <Class IRI="#Public_Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leisure_Activity"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Living_Room"/>
+        <Class IRI="#Public_Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <Class IRI="#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Master_Bedroom"/>
+        <Class IRI="#Bedroom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mobile"/>
+        <Class IRI="#Computing_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Name"/>
+        <Class IRI="#User_PII"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Off_Hours"/>
+        <Class IRI="#Interval"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phone_Number"/>
+        <Class IRI="#User_PII"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Place"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Point"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Private_Room"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Public_Room"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Read_Only"/>
+        <Class abbreviatedIRI="platys:Allow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Room"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Semi_Private_Room"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service_Provider"/>
+        <Class IRI="#User_PII"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Setup_Smart_Home_Device"/>
+        <Class IRI="#Household_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sleeping"/>
+        <Class IRI="#Leisure_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Camera"/>
+        <Class IRI="#Smart_Security_System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Display"/>
+        <Class IRI="#Smart_Home_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Doorbells"/>
+        <Class IRI="#Smart_Security_System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Home_Device"/>
+        <Class IRI="#Computing_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Light"/>
+        <Class IRI="#Smart_Home_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Lock"/>
+        <Class IRI="#Smart_Security_System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Plug"/>
+        <Class IRI="#Smart_Home_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Refrigerator"/>
+        <Class IRI="#Smart_Home_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Security_System"/>
+        <Class IRI="#Smart_Home_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Smoke_Detector"/>
+        <Class IRI="#Smart_Home_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Speaker"/>
+        <Class IRI="#Smart_Home_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Thermostat"/>
+        <Class IRI="#Smart_Home_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#State"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stranger"/>
+        <Class IRI="#Identity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Streaming_Device"/>
+        <Class IRI="#Smart_Home_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Study_Room"/>
+        <Class IRI="#Semi_Private_Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Studying"/>
+        <Class IRI="#Work_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <Class IRI="#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#URL_Requested"/>
+        <Class IRI="#User_PII"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Watching_TV"/>
+        <Class IRI="#Leisure_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weekday"/>
+        <Class IRI="#Interval"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weekend"/>
+        <Class IRI="#Interval"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Work_Activity"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Work_From_Home"/>
+        <Class IRI="#Work_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Working_Hours"/>
+        <Class IRI="#Interval"/>
+    </SubClassOf>
+    <DisjointUnion>
+        <Class IRI="#Audio_Visual_Device"/>
+        <Class IRI="#Smart_Camera"/>
+        <Class IRI="#Smart_Display"/>
+        <Class IRI="#Smart_Doorbells"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#Smart_Security_System"/>
+        <Class IRI="#Smart_Camera"/>
+        <Class IRI="#Smart_Doorbells"/>
+        <Class IRI="#Smart_Lock"/>
+    </DisjointUnion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#accessRequest"/>
+        <Class abbreviatedIRI="platys:Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#accessType"/>
+        <Class IRI="#Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAddress"/>
+        <Class IRI="#Home"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCoordinates"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#accessRequest"/>
+        <Class IRI="#Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#accessType"/>
+        <Class abbreviatedIRI="platys:Access_Type"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAddress"/>
+        <Class IRI="#Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCoordinates"/>
+        <Class IRI="#GPS_Location"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasAge"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasActivityDate"/>
+        <Class IRI="#Activity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAge"/>
+        <Class abbreviatedIRI="platys:Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGPSCoordinate"/>
+        <Class IRI="#Point"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasActivityDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAge"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasGPSCoordinate"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>adults have acess</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Adult family members have access</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="platys:Person"/>
+                <Variable IRI="https://raw.githubusercontent.com/sofiadutta/research/master/ontologies/cloud_smart_device_privacy.owl#P"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasAge"/>
+                <Variable IRI="https://raw.githubusercontent.com/sofiadutta/research/master/ontologies/cloud_smart_device_privacy.owl#P"/>
+                <Variable IRI="https://raw.githubusercontent.com/sofiadutta/research/master/ontologies/cloud_smart_device_privacy.owl#Age"/>
+            </DataPropertyAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="platys:Allow"/>
+                <Variable IRI="https://raw.githubusercontent.com/sofiadutta/research/master/ontologies/cloud_smart_device_privacy.owl#Perm1"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Family_Member"/>
+                <Variable IRI="https://raw.githubusercontent.com/sofiadutta/research/master/ontologies/cloud_smart_device_privacy.owl#P"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#accessRequest"/>
+                <Variable IRI="https://raw.githubusercontent.com/sofiadutta/research/master/ontologies/cloud_smart_device_privacy.owl#P"/>
+                <Variable IRI="https://raw.githubusercontent.com/sofiadutta/research/master/ontologies/cloud_smart_device_privacy.owl#Device1"/>
+            </ObjectPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="https://raw.githubusercontent.com/sofiadutta/research/master/ontologies/cloud_smart_device_privacy.owl#Age"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#accessType"/>
+                <Variable IRI="https://raw.githubusercontent.com/sofiadutta/research/master/ontologies/cloud_smart_device_privacy.owl#Device1"/>
+                <Variable IRI="https://raw.githubusercontent.com/sofiadutta/research/master/ontologies/cloud_smart_device_privacy.owl#Perm1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>no access for strangers</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Strangers have no access</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#accessRequest"/>
+                <Variable IRI="urn:swrl:var#P"/>
+                <Variable IRI="urn:swrl:var#Device1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="platys:Deny"/>
+                <Variable IRI="urn:swrl:var#Perm1"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Stranger"/>
+                <Variable IRI="urn:swrl:var#P"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasAge"/>
+                <Variable IRI="urn:swrl:var#P"/>
+                <Variable IRI="urn:swrl:var#Age"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="urn:swrl:var#Age"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+            </BuiltInAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="platys:Person"/>
+                <Variable IRI="urn:swrl:var#P"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#accessType"/>
+                <Variable IRI="urn:swrl:var#Device1"/>
+                <Variable IRI="urn:swrl:var#Perm1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>read only for children</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Children have read only access</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#accessRequest"/>
+                <Variable IRI="urn:swrl:var#P"/>
+                <Variable IRI="urn:swrl:var#Device1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Read_Only"/>
+                <Variable IRI="urn:swrl:var#Perm1"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Family_Member"/>
+                <Variable IRI="urn:swrl:var#P"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasAge"/>
+                <Variable IRI="urn:swrl:var#P"/>
+                <Variable IRI="urn:swrl:var#Age"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="urn:swrl:var#Age"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+            </BuiltInAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="platys:Person"/>
+                <Variable IRI="urn:swrl:var#P"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#accessType"/>
+                <Variable IRI="urn:swrl:var#Device1"/>
+                <Variable IRI="urn:swrl:var#Perm1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Device</IRI>
+        <Literal>A mobile or other computing device, apps, browsers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#User_PII</IRI>
+        <Literal>User personally identifiable information</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
