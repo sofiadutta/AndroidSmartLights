@@ -16,6 +16,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.sofiadutta.SHACApplication;
 
 /**
  * A login screen that offers login via email/password.
@@ -27,11 +28,6 @@ public class LoginActivity extends AppCompatActivity {
     private UserLoginTask mAuthTask = null;
     // UI references.
     private View mProgressView;
-
-    private static final String ADULT_FAMILY_MEMBER = "Adult/Family_Member";
-    private static final String CHILD_FAMILY_MEMBER = "Child/Family_Member";
-    private static final String NON_FAMILY_MEMBER = "Stranger";
-
     private View contextView;
 
     @Override
@@ -46,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         mButtonAdultFamilyMember.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin(LoginActivity.ADULT_FAMILY_MEMBER);
+                attemptLogin(SHACApplication.getAdultFamilyMember());
             }
         });
 
@@ -54,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         mButtonChildFamilyMember.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin(LoginActivity.CHILD_FAMILY_MEMBER);
+                attemptLogin(SHACApplication.getChildFamilyMember());
             }
         });
 
@@ -62,14 +58,15 @@ public class LoginActivity extends AppCompatActivity {
         mButtonNonFamilyMember.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin(LoginActivity.NON_FAMILY_MEMBER);
+                attemptLogin(SHACApplication.getNonFamilyMember());
             }
         });
 
         /*
         try {
             // Create key
-            final KeyGenerator keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore");
+            final KeyGenerator keyGenerator = KeyGenerator.getInstance(
+            KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore");
             final KeyGenParameterSpec keyGenParameterSpec = new KeyGenParameterSpec.Builder("first",
                     KeyProperties.PURPOSE_ENCRYPT | KeyProperties.PURPOSE_DECRYPT)
                     .setBlockModes(KeyProperties.BLOCK_MODE_GCM)
@@ -152,9 +149,14 @@ public class LoginActivity extends AppCompatActivity {
         protected Boolean doInBackground(String... params) {
             try {
                 userInfo = params[0];
-                kasaInfo = new KasaInfo(params[1], params[2]);
-                kasaInfo.refresh();
-                return kasaInfo.isValid();
+                if (userInfo.equals(SHACApplication.getNonFamilyMember())) {
+                    kasaInfo = null;
+                    return true;
+                } else {
+                    kasaInfo = new KasaInfo(params[1], params[2]);
+                    kasaInfo.refresh();
+                    return kasaInfo.isValid();
+                }
             } catch (Exception e) {
                 Log.e("LoginActivity", e.toString());
             }
@@ -170,15 +172,17 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
 
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                intent.putExtra("object", kasaInfo);
-                intent.putExtra("userInfo", userInfo);
+                intent.putExtra(SHACApplication.getKasaInfoObject(), kasaInfo);
+                intent.putExtra(SHACApplication.getUserInfo(), userInfo);
 
                 startActivity(intent);
             } else {
-                Snackbar snackbar = Snackbar.make(contextView, "The email or password provided is incorrect", Snackbar.LENGTH_LONG);
+                Snackbar snackbar = Snackbar.make(contextView, R.string.incorrect_credentials,
+                        Snackbar.LENGTH_LONG);
 
                 View snackBarView = snackbar.getView();
-                snackBarView.setBackgroundColor(getApplicationContext().getResources().getColor(R.color.colorPrimary, getBaseContext().getTheme()));
+                snackBarView.setBackgroundColor(getApplicationContext().getResources().getColor(
+                        R.color.colorPrimary, getBaseContext().getTheme()));
                 snackbar.show();
             }
         }

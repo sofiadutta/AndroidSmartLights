@@ -21,7 +21,7 @@ import okhttp3.Response;
 
 public class KasaInfo implements Serializable {
 
-    public static final MediaType JSON
+    private static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
     /**
      * The URL used to make HTTP post request
