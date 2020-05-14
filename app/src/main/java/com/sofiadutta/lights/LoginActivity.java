@@ -141,7 +141,7 @@ public class LoginActivity extends AppCompatActivity {
      * the user.
      */
     @SuppressLint("StaticFieldLeak")
-    public class UserLoginTask extends AsyncTask<String, Void, Boolean> {
+    private class UserLoginTask extends AsyncTask<String, Void, Boolean> {
         private KasaInfo kasaInfo;
         private String userInfo;
 

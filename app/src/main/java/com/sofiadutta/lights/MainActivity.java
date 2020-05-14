@@ -20,6 +20,7 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     private View contextView;
+    private String userInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,16 +45,14 @@ public class MainActivity extends AppCompatActivity {
 
         KasaInfo kasaInfo = (KasaInfo) getIntent().getSerializableExtra(
                 SHACApplication.getKasaInfoObject());
-        if (Objects.equals(getIntent().getSerializableExtra(SHACApplication.getUserInfo()),
-                SHACApplication.getAdultFamilyMember())) {
+        userInfo = getIntent().getSerializableExtra(SHACApplication.getUserInfo()).toString();
+        if (Objects.equals(userInfo, SHACApplication.getAdultFamilyMember())) {
             //Show the information if the member is an adult
             showData(kasaInfo);
-        } else if (Objects.equals(getIntent().getSerializableExtra(SHACApplication.getUserInfo()),
-                SHACApplication.getChildFamilyMember())) {
+        } else if (Objects.equals(userInfo, SHACApplication.getChildFamilyMember())) {
             //Show read only view if the member is an child
             showReadOnlyData(kasaInfo);
-        } else if (Objects.equals(getIntent().getSerializableExtra(SHACApplication.getUserInfo()),
-                SHACApplication.getNonFamilyMember())) {
+        } else if (Objects.equals(userInfo, SHACApplication.getNonFamilyMember())) {
             //Show no data to strangers; kasaInfo will be null anyway
             showNoData();
         }
@@ -93,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         // specify an adapter (see also next example)
         RecyclerView.Adapter mAdapter;
         if (kasaInfo != null) {
-            mAdapter = new MyAdapter(kasaInfo);
+            mAdapter = new MyAdapter(kasaInfo, userInfo);
             mRecyclerView.setAdapter(mAdapter);
         }
     }
@@ -112,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         // specify an adapter (see also next example)
         RecyclerView.Adapter mAdapter;
         if (kasaInfo != null) {
-            mAdapter = new MyAdapter(kasaInfo);
+            mAdapter = new MyAdapter(kasaInfo, userInfo);
             mRecyclerView.setAdapter(mAdapter);
         }
 
