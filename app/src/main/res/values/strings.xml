@@ -10,7 +10,10 @@
     <string name="error_invalid_password">This password is invalid</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."
     </string>
+    <string name="adult">Adam</string>
+    <string name="child">Jack</string>
+    <string name="stranger">John Doe</string>
+    <string name="text_headline">In the fields below, please enter the credentials to your Kasa account linked with the TP-Link smart plugs you want to control. If you do not have a Kasa account linked with your TP-Link smart plugs, please download its application in the Google Play Store and sign up.</string>
 </resources>

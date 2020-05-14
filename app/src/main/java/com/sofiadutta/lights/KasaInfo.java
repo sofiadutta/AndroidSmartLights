@@ -55,7 +55,7 @@ public class KasaInfo implements Serializable {
      * @param userName the user name of the account
      * @param password the password of the account
      */
-    public KasaInfo(String password, String userName) {
+    public KasaInfo(String userName, String password) {
         this.password = password;
         this.userName = userName;
 
@@ -249,8 +249,8 @@ public class KasaInfo implements Serializable {
                 .post(body)
                 .build();
         Response response = client.newCall(request).execute();
-		String returnString = response.body().string();
-		Log.v("Kasa output", returnString);
+//		String returnString = response.body().string();
+//		Log.v("Kasa output", returnString);
         return response.body().string();
     }
 
