@@ -2,17 +2,6 @@
     <string name="app_name">SHAC</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is invalid</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
     <string name="adult">Adam</string>
     <string name="child">Jack</string>
     <string name="stranger">John Doe</string>
@@ -23,4 +12,5 @@
     <string name="logout">Logout called…</string>
     <string name="no_access">Access denied!</string>
     <string name="read_only_access">Read only access…</string>
+    <string name="log_out">Log out</string>
 </resources>

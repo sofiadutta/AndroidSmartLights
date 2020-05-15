@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.sofiadutta.R;
 import com.sofiadutta.SHACApplication;
 
 import java.util.Objects;

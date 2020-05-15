@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.sofiadutta.R;
 import com.sofiadutta.SHACApplication;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {

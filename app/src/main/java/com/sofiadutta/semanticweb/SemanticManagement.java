@@ -6,12 +6,7 @@ import android.os.StrictMode;
 import android.util.Log;
 
 import com.google.gson.Gson;
-import com.sofiadutta.lights.R;
-import com.sofiadutta.semanticweb.data.ContextFact;
-import com.sofiadutta.semanticweb.data.Fact;
-import com.sofiadutta.semanticweb.data.FactCollection;
-import com.sofiadutta.semanticweb.data.Support;
-import com.sofiadutta.semanticweb.data.UserContextInformation;
+import com.sofiadutta.R;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -508,7 +503,7 @@ public class SemanticManagement {
 				if (i != 0)
 					newContext.activity += " & ";
 				newContext.activity += e.getKey() + "("
-						+ Double.toString((Double) e.getValue()) + ")";
+						+ e.getValue() + ")";
 				i++;
 			}
 

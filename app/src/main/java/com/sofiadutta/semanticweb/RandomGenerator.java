@@ -1,4 +1,4 @@
-package com.sofiadutta.semanticweb.data;
+package com.sofiadutta.semanticweb;
 
 import com.google.gson.Gson;
 
