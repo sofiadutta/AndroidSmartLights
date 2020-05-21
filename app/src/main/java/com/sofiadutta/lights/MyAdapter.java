@@ -15,6 +15,11 @@ import com.google.android.material.snackbar.Snackbar;
 import com.sofiadutta.R;
 import com.sofiadutta.SHACApplication;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private String[][] mDataset;
     private KasaInfo kasaInfo;
@@ -55,12 +60,58 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         }
 
         if (userInfo.equals(SHACApplication.getAdultFamilyMember())) {
-            holder.mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    ChangeStateTask changeStateTask = new ChangeStateTask();
-                    changeStateTask.execute(position);
+            try {
+                String string1 = "07:00:00";
+                Date time1 = new SimpleDateFormat("HH:mm:ss").parse(string1);
+                Calendar calendar1 = Calendar.getInstance();
+                calendar1.setTime(time1);
+                calendar1.add(Calendar.DATE, 1);
+
+
+                String string2 = "22:00:00";
+                Date time2 = new SimpleDateFormat("HH:mm:ss").parse(string2);
+                Calendar calendar2 = Calendar.getInstance();
+                calendar2.setTime(time2);
+                calendar2.add(Calendar.DATE, 1);
+
+
+                Date currentTime = Calendar.getInstance().getTime();
+
+//                String someRandomTime = "01:00:00";
+//                Date d = new SimpleDateFormat("HH:mm:ss").parse(someRandomTime);
+                Calendar calendar3 = Calendar.getInstance();
+                calendar3.setTime(currentTime);
+                calendar3.add(Calendar.DATE, 1);
+
+                Date x = calendar3.getTime();
+                if (x.before(calendar1.getTime()) && x.after(calendar2.getTime())) {
+                    //checkes whether the current time is between 14:49:00 and 20:11:13.
+                    holder.mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                            buttonView.setChecked(!isChecked);
+                            Snackbar snackbar = Snackbar.make(buttonView, R.string.read_only_access,
+                                    Snackbar.LENGTH_LONG);
+
+                            View snackBarView = snackbar.getView();
+                            snackBarView.setBackgroundColor(buttonView.getResources().getColor(
+                                    R.color.colorPrimary, buttonView.getContext().getTheme()));
+                            snackbar.show();
+                        }
+                    });
+                } else {
+                    Log.d("timePrajitIs1", x.toString());
+                    Log.d("timePrajitIs2", calendar1.getTime().toString());
+                    Log.d("timePrajitIs3", calendar2.getTime().toString());
+                    holder.mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                            ChangeStateTask changeStateTask = new ChangeStateTask();
+                            changeStateTask.execute(position);
+                        }
+                    });
                 }
-            });
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         } else {
             holder.mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
