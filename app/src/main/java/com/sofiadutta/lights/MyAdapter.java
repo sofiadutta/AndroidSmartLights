@@ -61,35 +61,50 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         if (userInfo.equals(SHACApplication.getAdultFamilyMember())) {
             try {
-                String string1 = "07:00:00";
-                Date time1 = new SimpleDateFormat("HH:mm:ss").parse(string1);
+                Date currentTime = Calendar.getInstance().getTime();
+                String currentTimeStr = currentTime.toString();
+
+                String stringDate = currentTimeStr.substring(8, 10);
+                String stringMonth = currentTimeStr.substring(4, 7);
+                String stringYear = currentTimeStr.substring(24);
+                String stringTime = currentTimeStr.substring(11, 19);
+
+                final String tenPM = "00:00:00";
+                final String sevenAM = "07:00:00";
+
+                String string1 = stringDate + "/" + stringMonth + "/" + stringYear + " " + tenPM;
+                Date time1 = new SimpleDateFormat("dd/MMM/yyyy HH:mm:ss").parse(string1);
                 Calendar calendar1 = Calendar.getInstance();
                 calendar1.setTime(time1);
                 calendar1.add(Calendar.DATE, 1);
 
+                String nextDay = Integer.toString(Integer.parseInt(stringDate) + 1);
 
-                String string2 = "22:00:00";
-                Date time2 = new SimpleDateFormat("HH:mm:ss").parse(string2);
+                String string2 = nextDay + "/" + stringMonth + "/" + stringYear + " " + sevenAM;
+                Date time2 = new SimpleDateFormat("dd/MMM/yyyy HH:mm:ss").parse(string2);
                 Calendar calendar2 = Calendar.getInstance();
                 calendar2.setTime(time2);
                 calendar2.add(Calendar.DATE, 1);
 
-
-                Date currentTime = Calendar.getInstance().getTime();
-
-//                String someRandomTime = "01:00:00";
-//                Date d = new SimpleDateFormat("HH:mm:ss").parse(someRandomTime);
+                currentTimeStr = stringDate + "/" + stringMonth + "/" + stringYear + " " + stringTime;
+                Date x = new SimpleDateFormat("dd/MMM/yyyy HH:mm:ss").parse(currentTimeStr);
                 Calendar calendar3 = Calendar.getInstance();
-                calendar3.setTime(currentTime);
+                calendar3.setTime(x);
                 calendar3.add(Calendar.DATE, 1);
 
-                Date x = calendar3.getTime();
-                if (x.before(calendar1.getTime()) && x.after(calendar2.getTime())) {
-                    //checkes whether the current time is between 14:49:00 and 20:11:13.
+//                Log.d("timePrajitIsBefore", Boolean.toString(x.after(time1)));
+//                Log.d("timePrajitIsAfter", Boolean.toString(x.before(time2)));
+//                Log.d("timePrajitIsCheck", x.toString());
+//                Log.d("timePrajitIsStart", time1.toString());
+//                Log.d("timePrajitIsEnd", time2.toString());
+                if (x.after(time1) && x.before(time2)) {
+                    final String temporalString = "Reason: Rule 7 - \"Between " + tenPM + " hours and " +
+                            sevenAM + " hours, access to device is denied\"";
+                    //checks whether the current time is between 14:49:00 and 20:11:13.
                     holder.mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                             buttonView.setChecked(!isChecked);
-                            Snackbar snackbar = Snackbar.make(buttonView, R.string.read_only_access,
+                            Snackbar snackbar = Snackbar.make(buttonView, temporalString,
                                     Snackbar.LENGTH_LONG);
 
                             View snackBarView = snackbar.getView();
@@ -99,9 +114,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                         }
                     });
                 } else {
-                    Log.d("timePrajitIs1", x.toString());
-                    Log.d("timePrajitIs2", calendar1.getTime().toString());
-                    Log.d("timePrajitIs3", calendar2.getTime().toString());
+                    Log.d("timePrajitIsCheckPass", "False");
                     holder.mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                             ChangeStateTask changeStateTask = new ChangeStateTask();
