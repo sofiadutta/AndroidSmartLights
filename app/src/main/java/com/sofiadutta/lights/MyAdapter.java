@@ -69,7 +69,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 String stringYear = currentTimeStr.substring(24);
                 String stringTime = currentTimeStr.substring(11, 19);
 
-                final String tenPM = "00:00:00";
+                final String tenPM = "22:00:00";
                 final String sevenAM = "07:00:00";
 
                 String string1 = stringDate + "/" + stringMonth + "/" + stringYear + " " + tenPM;
