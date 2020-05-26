@@ -98,8 +98,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 //                Log.d("timePrajitIsStart", time1.toString());
 //                Log.d("timePrajitIsEnd", time2.toString());
                 if (x.after(time1) && x.before(time2)) {
-                    final String temporalString = "Reason: Rule 7 - \"Between " + tenPM + " hours and " +
-                            sevenAM + " hours, access to device is denied\"";
+                    final String temporalString = "Reason: Rule 7 - \"Between " + tenPM +
+                            " hours and " + sevenAM + " hours, access to device is denied\"";
                     //checks whether the current time is between 14:49:00 and 20:11:13.
                     holder.mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
