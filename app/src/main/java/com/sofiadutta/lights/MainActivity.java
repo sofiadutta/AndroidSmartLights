@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         infmodel.listStatements();
         Log.v("ontology", infmodel.listStatements().toString());
         SemanticManagement sm = new SemanticManagement(getApplicationContext());
-        sm.getNamesInstances("Prajit");
+        sm.getNamesInstances("Sofia");
         */
     }
 

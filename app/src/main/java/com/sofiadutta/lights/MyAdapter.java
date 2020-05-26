@@ -92,11 +92,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 calendar3.setTime(x);
                 calendar3.add(Calendar.DATE, 1);
 
-//                Log.d("timePrajitIsBefore", Boolean.toString(x.after(time1)));
-//                Log.d("timePrajitIsAfter", Boolean.toString(x.before(time2)));
-//                Log.d("timePrajitIsCheck", x.toString());
-//                Log.d("timePrajitIsStart", time1.toString());
-//                Log.d("timePrajitIsEnd", time2.toString());
+                Log.d("timeSofiaIsBefore", Boolean.toString(x.after(time1)));
+                Log.d("timeSofiaIsAfter", Boolean.toString(x.before(time2)));
+                Log.d("timeSofiaIsCheck", x.toString());
+                Log.d("timeSofiaIsStart", time1.toString());
+                Log.d("timeSofiaIsEnd", time2.toString());
                 if (x.after(time1) && x.before(time2)) {
                     final String temporalString = "Reason: Rule 7 - \"Between " + tenPM +
                             " hours and " + sevenAM + " hours, access to device is denied\"";
@@ -114,7 +114,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                         }
                     });
                 } else {
-                    Log.d("timePrajitIsCheckPass", "False");
+                    Log.d("timeSofiaIsCheckPass", "False");
                     holder.mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                             ChangeStateTask changeStateTask = new ChangeStateTask();
