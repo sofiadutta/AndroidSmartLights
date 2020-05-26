@@ -9,8 +9,8 @@
         Smart Home Access Control application.</string>
     <string name="upload_data">Uploading data…</string>
     <string name="incorrect_credentials">The email or password provided is incorrect</string>
-    <string name="logout">Logout called…</string>
     <string name="no_access">Access denied!</string>
     <string name="read_only_access">Read only access…</string>
-    <string name="log_out">Log out</string>
+    <string name="title_activity_location_settings">Settings</string>
+    <string name="settings">Settings</string>
 </resources>

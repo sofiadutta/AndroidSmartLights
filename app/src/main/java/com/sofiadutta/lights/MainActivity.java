@@ -5,7 +5,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -157,8 +156,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
-        if (item.getItemId() == R.id.log_out) {
-            Toast.makeText(this, R.string.logout, Toast.LENGTH_SHORT).show();
+        if (item.getItemId() == R.id.settings) {
+
             return true;
         }
         return super.onOptionsItemSelected(item);
