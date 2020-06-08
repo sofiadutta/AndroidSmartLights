@@ -159,7 +159,7 @@ public class KasaInfo implements Serializable {
             String details = post(URL + "//?token=" + token,
                     "{\"method\":\"passthrough\", \"params\": {\"deviceId\": \"" + lights[i][2]
                             + "\", \"requestData\": \"{\\\"system\\\":{\\\"get_sysinfo\\\":null},\\\"emeter\\\":{\\\"get_realtime\\\":null}}\" }}");
-            Log.v("Kasa details", details);
+            Log.v("Kasa details", lights[i][2]);
             lights[i][1] = jsonString(details, "relay_state", details.indexOf("relay_state"), 3, ',');
         }
     }

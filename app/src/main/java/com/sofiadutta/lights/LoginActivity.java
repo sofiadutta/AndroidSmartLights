@@ -16,6 +16,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.sofiadutta.R;
 import com.sofiadutta.SHACApplication;
 
 /**

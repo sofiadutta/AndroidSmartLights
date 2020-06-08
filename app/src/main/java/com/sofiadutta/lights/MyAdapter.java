@@ -12,7 +12,13 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.sofiadutta.R;
 import com.sofiadutta.SHACApplication;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private String[][] mDataset;
@@ -54,12 +60,71 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         }
 
         if (userInfo.equals(SHACApplication.getAdultFamilyMember())) {
-            holder.mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    ChangeStateTask changeStateTask = new ChangeStateTask();
-                    changeStateTask.execute(position);
+            try {
+                Date currentTime = Calendar.getInstance().getTime();
+                String currentTimeStr = currentTime.toString();
+
+                String stringDate = currentTimeStr.substring(8, 10);
+                String stringMonth = currentTimeStr.substring(4, 7);
+                String stringYear = currentTimeStr.substring(24);
+                String stringTime = currentTimeStr.substring(11, 19);
+
+                final String tenPM = "22:00:00";
+                final String sevenAM = "07:00:00";
+
+                String string1 = stringDate + "/" + stringMonth + "/" + stringYear + " " + tenPM;
+                Date time1 = new SimpleDateFormat("dd/MMM/yyyy HH:mm:ss").parse(string1);
+                Calendar calendar1 = Calendar.getInstance();
+                calendar1.setTime(time1);
+                calendar1.add(Calendar.DATE, 1);
+
+                String nextDay = Integer.toString(Integer.parseInt(stringDate) + 1);
+
+                String string2 = nextDay + "/" + stringMonth + "/" + stringYear + " " + sevenAM;
+                Date time2 = new SimpleDateFormat("dd/MMM/yyyy HH:mm:ss").parse(string2);
+                Calendar calendar2 = Calendar.getInstance();
+                calendar2.setTime(time2);
+                calendar2.add(Calendar.DATE, 1);
+
+                currentTimeStr = stringDate + "/" + stringMonth + "/" + stringYear + " " + stringTime;
+                Date x = new SimpleDateFormat("dd/MMM/yyyy HH:mm:ss").parse(currentTimeStr);
+                Calendar calendar3 = Calendar.getInstance();
+                calendar3.setTime(x);
+                calendar3.add(Calendar.DATE, 1);
+
+                Log.d("timeSofiaIsBefore", Boolean.toString(x.after(time1)));
+                Log.d("timeSofiaIsAfter", Boolean.toString(x.before(time2)));
+                Log.d("timeSofiaIsCheck", x.toString());
+                Log.d("timeSofiaIsStart", time1.toString());
+                Log.d("timeSofiaIsEnd", time2.toString());
+                if (x.after(time1) && x.before(time2)) {
+                    final String temporalString = "Reason: Rule 7 - \"Between " + tenPM +
+                            " hours and " + sevenAM + " hours, access to device is denied\"";
+                    //checks whether the current time is between 14:49:00 and 20:11:13.
+                    holder.mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                            buttonView.setChecked(!isChecked);
+                            Snackbar snackbar = Snackbar.make(buttonView, temporalString,
+                                    Snackbar.LENGTH_LONG);
+
+                            View snackBarView = snackbar.getView();
+                            snackBarView.setBackgroundColor(buttonView.getResources().getColor(
+                                    R.color.colorPrimary, buttonView.getContext().getTheme()));
+                            snackbar.show();
+                        }
+                    });
+                } else {
+                    Log.d("timeSofiaIsCheckPass", "False");
+                    holder.mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                            ChangeStateTask changeStateTask = new ChangeStateTask();
+                            changeStateTask.execute(position);
+                        }
+                    });
                 }
-            });
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         } else {
             holder.mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
